@@ -16,11 +16,13 @@
     [ <a href="javascript:listLocalNodes()">listLocalNodes()</a> ]
     <h2>Local Pages</h2>
     <ul id="pagelist"></ul>
-    <h2>Web Storage Test</h2>
-    <a href="javascript:void(webstorage_test())">run</a>
-    <h2>DokuWiki XML-RPC Test</h2>
-    <a href="javascript:void(xmlrpc_test())">run</a>
-    <h2>DokuWiki XML-RPC Download</h2>
-    <a href="javascript:void(xmlrpc_download())">run</a>
+    <form name="editor" action="void()">
+      <div id="edithead">
+        <a href="javascript:save()">Save</a>
+        <a href="javascript:empty()">Empty</a>
+        <span id="loaded_page"></span>
+      </div>
+      <textarea id="editarea" cols="80" rows=20></textarea>
+    </form>
   </body>
 </html>
