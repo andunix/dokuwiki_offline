@@ -24,18 +24,23 @@ function clear() {
 }
 function download() {
 	if (DEBUG) console.log("download() - BEGIN");
-	//clear();
 	var pages = service.dokuwiki.getPagelist(NAMESPACE, []);
 	if (DEBUG) console.log(pages);
 	var pagelist = [];
-	for (var i = 0; i < pages.length; i++) {
-		var page = pages[i];
-		if (DEBUG) console.log('PAGE: '+page.id);
-		var page_src = service.wiki.getPage(page.id);
-		if (DEBUG) console.log(page_src);
-		localStorage.setItem(page.id+"#text", page_src);
-		localStorage.setItem(page.id+"#mtime", page.mtime);
-		//localStorage.removeItem(page.id+"#mtime");
+	try {
+		for (var i = 0; i < pages.length; i++) {
+			var page = pages[i];
+			if (DEBUG) console.log('PAGE: '+page.id);
+			var page_src = service.wiki.getPage(page.id);
+			if (DEBUG) console.log(page_src);
+			localStorage.setItem(page.id+"#text", page_src);
+			localStorage.setItem(page.id+"#mtime", page.mtime);
+			//localStorage.removeItem(page.id+"#mtime");
+		}
+	} catch (err) {
+		if (err.name == "QUOTA_EXCEEDED_ERR") {
+			alert("Please allow storing local data or increase the quota.");
+		}
 	}
 	listLocalPages();
 	if (DEBUG) console.log("download() - END");
