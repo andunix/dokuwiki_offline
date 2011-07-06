@@ -1,0 +1,7 @@
+base   offline
+author Andreas Huber
+email  andunix@googlemail.com
+date   2011-06-13
+name   offline plugin
+desc   DokuWiki Offline
+url    http://offline.andunix.net/

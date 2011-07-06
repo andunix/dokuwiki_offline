@@ -1,0 +1,25 @@
+offline Plugin for DokuWiki
+
+DokuWiki Offline
+
+All documentation for this plugin can be found at
+http://offline.andunix.net/
+
+If you install this plugin manually, make sure it is installed in
+lib/plugins/offline/ - if the folder is called different it
+will not work!
+
+Please refer to http://www.dokuwiki.org/plugins for additional info
+on how to install plugins in DokuWiki.
+
+----
+
+Copyright 2006-2009 Andreas Huber - http://andunix.net/
+
+Licensed unter the Creative Commons Attribution 3.0 Germany License
+http://creativecommons.org/licenses/by/3.0/de/deed.en
+
+Lizensiert unter der Creative Commons Namensnennung 3.0 Deutschland Lizenz
+http://creativecommons.org/licenses/by/3.0/de/
+
+@author Andreas Huber, <a href="http://andunix.net/">http://andunix.net/</a>
